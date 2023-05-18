@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import { Drawer, Stack, Box, Typography, Button, TextField } from '@mui/material';
+import { Drawer, Stack, Box, Typography, Button, TextField,Card,CardActionArea,CardContent } from '@mui/material';
 import logo from '../assets/logo.png'
 import { auth, db } from './firebaseConfig';
 import { collection,getDocs, orderBy } from 'firebase/firestore';
@@ -17,7 +17,7 @@ const Dashboard = () => {
     const snap = await getDocs(col,orderBy('timestamp','asc'));
     const list = snap.docs.map(doc => doc.data());
     setUpcomingResource(list);
-    console.log(upcomingResource)
+    console.log(upcomingResource.length);
   }
 
 
@@ -128,7 +128,20 @@ const Dashboard = () => {
               <Stack sx={{ width: { md: 600, sm: 500, xs: 320 }, mt: 3, }}>
                 <Stack sx={{ height: 500 }}>
                   <Typography sx={{ fontSize: { md: 30, sm: 25, xs: 20 }, fontWeight: 'bold', p: 2, color: '#fff' }}>Get Started:</Typography>
-                
+                  <Card sx={{m:0.5}}>
+                    <CardActionArea>
+                    <CardContent>
+                      <Typography sx={{fontWeight:'bold'}}>✔️ Complete Roadmap to Web3</Typography>
+                    </CardContent>
+                    </CardActionArea>
+                  </Card>
+                  <Card sx={{m:0.5}}>
+                    <CardActionArea>
+                    <CardContent>
+                      <Typography sx={{fontWeight:'bold'}}>✔️ Introduction to Web3</Typography>
+                    </CardContent>
+                    </CardActionArea>
+                  </Card>
                 </Stack>
               </Stack>
             
@@ -140,7 +153,8 @@ const Dashboard = () => {
               <Stack sx={{ height: 500, backgroundColor: '#fff', borderRadius: 10 }}>
                 <Typography sx={{ fontSize: { md: 30, sm: 25, xs: 20 }, fontWeight: 'bold', p: 2, color: '#000' }}>Upcoming Resources:</Typography>
                 <Stack>
-                  {upcomingResource.map((item, key) => {
+                  {
+                  upcomingResource.map((item, key) => {
                     var d = item.timestamp.toDate().toString();
                     
                     return (
@@ -149,7 +163,8 @@ const Dashboard = () => {
                       <Typography sx={{ml:2,fontSize: {md:15,sm:15,xs:12}}}>Coming Soon</Typography>
                     </Stack>
                     )
-                  })}
+                  })
+                }
                   
                 </Stack>
               </Stack>

@@ -63,7 +63,7 @@ const Home = () => {
                         <TextField disabled placeholder='Enter Password' sx={{ width: { md: 400, sm: 400, xs: 300 }, mt: 2 }} type='password' onChange={(text)=>setPass(text.target.value)} />
                         <Button disabled variant='outlined' sx={{ mt: 2 }} onClick={()=>{SignIn()}} >Sign In</Button>
                         <Typography sx={{color:'red',fontSize:15,width:300}}>Cannot login using email-password at this moment, try logging with Google</Typography>
-                        <Typography sx={{ m: 5, fontSize: 30 }}>OR</Typography>
+                        <Typography sx={{ m: 1, fontSize: 30 }}>OR</Typography>
                         <Button variant='contained'  sx={{color:'#fff'}} onClick={()=>{LogInWithGoogle()}} >  Login With Google</Button>
                     </Stack>
                 </Stack>

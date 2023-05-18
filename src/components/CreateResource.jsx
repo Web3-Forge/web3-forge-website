@@ -48,6 +48,7 @@ const CreateResource = () => {
           setAutherName('');
           setAuthorUrl('');
           setResName('');
+          setFile('');
         })
       } catch (error) {
         console.log(error)

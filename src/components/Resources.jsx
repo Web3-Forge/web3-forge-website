@@ -12,8 +12,8 @@ const Resources = () => {
 
   const loadRes = async () => {
     const col = collection(db, 'resources');
-    const q = query(col,orderBy('timestamp','asc'))
-    const snap = await getDocs(q);
+    const q = query(col,orderBy('timestamp','desc'))
+    const snap = await getDocs(q); 
     const list = snap.docs.map(doc => doc.data());
     setResources(list)
     console.log(list)
@@ -46,14 +46,14 @@ const Resources = () => {
         <Button onClick={()=>setIsDrawerOpen(true)}>Menu</Button>
       <Stack sx={{ alignItems: 'center' }}>
         <SideDrawer open={isDrawerOpen} onClose={()=>setIsDrawerOpen(false)} />
-        <Stack sx={{ flexDirection: { md: 'row' } }}>
-          <Stack sx={{border:1,width:{md:600,sm:500,xs:320},height:800,backgroundColor:'#fff'}}>
-              <Typography sx={{ color: '#000', fontWeight: 'bold', p: 1 }}>All resources:</Typography>
+        <Stack sx={{ flexDirection: { md: 'row',xs:"column-reverse" } }}>
+          <Stack sx={{border:1,width:{md:600,sm:500,xs:320},backgroundColor:'#fff'}}>
+              <Typography sx={{ color: '#000', fontWeight: 'bold', p: 1 }}>All latest resources:</Typography>
               
               {resources.length != 0 ?
                 resources.map((items, key) => {
                   return (
-                    <Card sx={{ borderBottom: 1 }} key={key} >
+                    <Card sx={{ borderBottom: 1,height:100 }} key={key} >
                         <CardActionArea href={items.res_url} target='_blank' >
                         <CardContent>
                           <Stack sx={{flexDirection:'row'}}>

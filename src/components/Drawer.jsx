@@ -17,7 +17,7 @@ const SideDrawer = (props) => {
         Learning:
         <Button href='/dashboard'  sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold', mt: 1 }}>🥷 Dashboard</Button>
       <Button href='/resources'  sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold', mt: 1 }}>📖 Resources</Button>
-      <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🏃‍♂️ Practise Projects</Button>
+      <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🏃‍♂️ Practise Projects 🔜</Button>
       <Button href='https://www.youtube.com/@Web3Forge' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>📀 Our Youtube</Button>
       <Button href='https://github.com/Web3-Forge' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🧑‍🤝‍🧑 Gihtub Organization</Button>
     </Stack>
