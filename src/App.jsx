@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import Resources from './components/Resources';
 import CreateResource from './components/CreateResource';
 
+
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path={'/dashboard'} element={<Dashboard />} />
       <Route path={'/resources'} element={<Resources/>} />
       <Route path={'/create-resource'} element={<CreateResource/>} />
+      
       </Routes> 
   )
 }

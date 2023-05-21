@@ -148,7 +148,7 @@ const Home = () => {
               <Stack sx={{ alignItems:{md:'start',sm:'start',xs:'center'}}}>
               <Typography sx={{ color: '#fff', fontSize: { md: 40, sm: 30, xs: 20 }, fontWeight: 'bold', mr: { md: 15, sm: 5, xs: 0 }, mt: { md: 0, sm: 0, xs: 3 } }}>Empowering <br />Web3 with Open Source</Typography>
               <Typography sx={{color:'#fff',fontSize:{md:20,sm:15,xs:13}}}>Learn and contribute in our amazing open source projects.<br/> Especially built for Web3 learners/devs/enthusiasts</Typography>
-              <Button sx={{width:200,color:'#fff',border:1,mt:2}}>View Our Github Org</Button>
+              <Button href='https://github.com/Web3-Forge' target='_blank' sx={{width:200,color:'#fff',border:1,mt:2}}>View Our Github Org</Button>
               </Stack>
               <Stack sx={{ width: { md: 300, sm: 300, xs: 200 } }}>
                   <img src={'https://cdn.pixabay.com/photo/2014/04/03/11/55/globe-312563__340.png'} />
@@ -167,9 +167,9 @@ const Home = () => {
 
           <Stack sx={{mt:5,flexDirection:{md:'row',sm:'row',xs:'column-reverse'},alignItems:'center',textAlign:{md:'left',xs:'center',sm:'left'}}}>
               <Stack sx={{ alignItems:{md:'start',sm:'start',xs:'center'}}}>
-              <Typography sx={{ color: '#fff', fontSize: { md: 40, sm: 30, xs: 20 }, fontWeight: 'bold', mr: { md: 15, sm: 5, xs: 0 }, mt: { md: 0, sm: 0, xs: 3 } }}>Get Sponsored by us</Typography>
+              <Typography sx={{ color: '#fff', fontSize: { md: 40, sm: 30, xs: 20 }, fontWeight: 'bold', mr: { md: 15, sm: 5, xs: 0 }, mt: { md: 0, sm: 0, xs: 3 } }}>Get Sponsored by us 🔜</Typography>
               <Typography sx={{color:'#fff',fontSize:{md:20,sm:15,xs:13}}}>Learn, contribute and earn by working with us.<br/> Opportunity for Web3 devs/enthusiasts, content creators</Typography>
-              <Button sx={{width:200,color:'#fff',border:1,mt:2}}>Checkout Ways</Button>
+              <Button disabled  sx={{width:200,backgroundColor:'#fff',border:1,mt:2}}>Checkout Ways 🔜</Button>
               </Stack>
               <Stack sx={{ width: { md: 300, sm: 300, xs: 200 } }}>
                   <img src={'https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-money-clipart-with-sack-png-image_5826043.png'} />

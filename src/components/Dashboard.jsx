@@ -68,25 +68,25 @@ const Dashboard = () => {
           <Stack sx={{ mt: 5 }}>
             Learning:
             <Button href='/resources'  sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold', mt: 1 }}>📖 Resources</Button>
-            <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🏃‍♂️ Practise Projects</Button>
+            <Button disabled sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🏃‍♂️ Practise Projects 🔜</Button>
             <Button href='https://www.youtube.com/@Web3Forge' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>📀 Our Youtube</Button>
             <Button href='https://github.com/Web3-Forge' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🧑‍🤝‍🧑 Gihtub Organization</Button>
           </Stack>
         
           <Stack sx={{ mt: 5 }}>
             Contribution:
-            <Button href='' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold', mt: 1 }}>🤑 Get Sponsored 🔜</Button>
-            <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>👨‍💻 Share your project 🔜</Button>
-            <Button href='/create-resource' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>✍️ Create Resource 🔜</Button>
-            <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🌐 Discord Server</Button>
-            <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>💵 Sponsor Us 🔜</Button>
+            <Button  disabled href='' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold', mt: 1 }}>🤑 Get Sponsored 🔜</Button>
+            <Button disabled sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>👨‍💻 Share your project 🔜</Button>
+            <Button href='/create-resource' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>✍️ Create Resource </Button>
+            <Button href='https://discord.gg/mQudDtCjrp' target='_blank' sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>🌐 Discord Server</Button>
+            <Button disabled sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>💵 Sponsor Us 🔜</Button>
           </Stack>
 
           <Stack sx={{ mt: 5 }}>
-            <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>⚙️ Settings 🔜</Button>
+            <Button disabled sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>⚙️ Settings 🔜</Button>
             <Button sx={{ borderBottom: 2, borderColor: '#000', fontWeight: 'bold' }}>📜 Readme</Button>
           </Stack>
-          <Stack sx={{ alignItems: 'center', mt: 2 }} >v.1.4</Stack>
+          <Stack sx={{ alignItems: 'center', mt: 2 }} >v.1.5</Stack>
         </Drawer>
       
         <Stack sx={{ alignItems: 'center' }}>
@@ -110,17 +110,19 @@ const Dashboard = () => {
                   </Stack>
                   <Stack>
                     <Typography sx={{ fontSize: { md: 25, sm: 22, xs: 15 } }}>Contribute in our code</Typography>
-                    <Typography sx={{ fontSize: { md: 15, sm: 12, xs: 10 } }}>You can view our code on Github</Typography>
+                    <Typography sx={{ fontSize: { md: 15, sm: 12, xs: 10 } }}>You can view our code on Github or raise an issue.</Typography>
                   </Stack>
-                  <Button sx={{ backgroundColor: '#000', color: '#fff', ml: { md: 7, sm: 5, xs: 3 }, width: { md: 100, sm: 100, xs: 70 } }}>View Code</Button>
+                  <Button href='https://github.com/Web3-Forge/web3-forge-website' target='_blank'  sx={{ backgroundColor: '#000', color: '#fff', ml: { md: 7, sm: 3, xs: 1 }, width: { md: 100, sm: 100, xs: 20 } }}>
+                   <Typography sx={{fontSize:{md:14,sm:14,xs:8}}}>View Code</Typography> 
+                    </Button>
                 </Stack>
               </Stack>
               <Stack sx={{ flexDirection: 'row', mt: 3 }}>
                 <Button variant='contained' sx={{ width: { md: 200, sm: 150, xs: 130 }, backgroundColor: '#5689CE', borderRadius: 7 }} onClick={() => { setIsDrawerOpen(true) }} >
                   <Typography sx={{ fontSize: { md: 25, sx: 20, xs: 15 }, fontWeight: 'bold', }} >Open Menu</Typography>
                 </Button>
-                <Button variant='contained' sx={{ width: { md: 200, sm: 150, xs: 130 }, backgroundColor: '#5689CE', ml: 2, borderRadius: 7 }} href='' >
-                  <Typography sx={{ fontSize: { md: 25, sx: 20, xs: 15 }, fontWeight: 'bold', textAlign: 'center' }} >Get Sponsored</Typography>
+                <Button variant='contained' sx={{ width: { md: 200, sm: 150, xs: 130 }, backgroundColor: 'grey', ml: 2, borderRadius: 7,":hover":{backgroundColor:"grey"} }} disableRipple disableElevation href='' >
+                  <Typography sx={{ fontSize: { md: 25, sx: 20, xs: 15 }, fontWeight: 'bold', textAlign: 'center' }} >Get Sponsored </Typography>
                 </Button>
               </Stack>
             
@@ -129,16 +131,23 @@ const Dashboard = () => {
                 <Stack sx={{ height: 500 }}>
                   <Typography sx={{ fontSize: { md: 30, sm: 25, xs: 20 }, fontWeight: 'bold', p: 2, color: '#fff' }}>Get Started:</Typography>
                   <Card sx={{m:0.5}}>
-                    <CardActionArea>
+                    <CardActionArea href='https://web3-forge.github.io/web3-forge/Resources/all-resources/roadmap_for_web3' target='_blank' >
                     <CardContent>
                       <Typography sx={{fontWeight:'bold'}}>✔️ Complete Roadmap to Web3</Typography>
                     </CardContent>
                     </CardActionArea>
                   </Card>
                   <Card sx={{m:0.5}}>
-                    <CardActionArea>
+                    <CardActionArea target='_blank' href='https://web3-forge.github.io/web3-forge/Resources/all-resources/introduction_to_web3'>
                     <CardContent>
                       <Typography sx={{fontWeight:'bold'}}>✔️ Introduction to Web3</Typography>
+                    </CardContent>
+                    </CardActionArea>
+                  </Card>
+                  <Card sx={{m:0.5}}>
+                    <CardActionArea target='_blank' href='https://www.youtube.com/watch?v=fF_yTe7h1hQ'>
+                    <CardContent>
+                      <Typography sx={{fontWeight:'bold'}}>✔️ Free Blockchain Course (6+ hours) </Typography> 
                     </CardContent>
                     </CardActionArea>
                   </Card>
@@ -153,7 +162,7 @@ const Dashboard = () => {
               <Stack sx={{ height: 500, backgroundColor: '#fff', borderRadius: 10 }}>
                 <Typography sx={{ fontSize: { md: 30, sm: 25, xs: 20 }, fontWeight: 'bold', p: 2, color: '#000' }}>Upcoming Resources:</Typography>
                 <Stack>
-                  {
+                  {upcomingResource.length !== 0?
                   upcomingResource.map((item, key) => {
                     var d = item.timestamp.toDate().toString();
                     
@@ -163,16 +172,17 @@ const Dashboard = () => {
                       <Typography sx={{ml:2,fontSize: {md:15,sm:15,xs:12}}}>Coming Soon</Typography>
                     </Stack>
                     )
-                  })
+                  }): 
+                    <Stack>
+                      <img src='https://i.gifer.com/P4id.gif' />
+                    </Stack>
+                  
                 }
                   
                 </Stack>
               </Stack>
 
-              <Stack sx={{ height: 200, backgroundColor: '#fff', borderRadius: { xs: 5 }, mt: 2, alignItems: 'center' }}>
-                <Typography sx={{ fontSize: { md: 30, sm: 25, xs: 20 }, fontWeight: 'bold', p: 2, color: '#000' }}>Web3 News:</Typography>
-                <Typography sx={{alignItems:'center'}}>Coming Soon</Typography>
-              </Stack>
+             
             </Stack>
 
           </Stack>
