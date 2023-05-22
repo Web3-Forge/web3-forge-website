@@ -183,7 +183,7 @@ const Home = () => {
                   </Stack>
                   <Typography sx={{ color: "#5865F2", mt: 2, fontWeight: 'bold',fontSize:{md:30,sm:27,xs:26},textAlign:'center' }}>Join our Discord Server</Typography>
                   <Typography sx={{color:'#fff',mt:2,textAlign:'center',fontSize:{md:25,sm:20,xs:18}}}>Build awesome projects with professionals & developers and contribute to modern technology.</Typography>
-                    <Button variant='contained' sx={{mt:2}}>Join Now</Button>
+                    <Button href='https://discord.gg/mQudDtCjrp' target='_blank' variant='contained' sx={{mt:2}}>Join Now</Button>
               </Stack>
 
               <Stack sx={{border:2,borderBottomRightRadius:40,borderColor:'#fff',width:300,alignItems:'center',p:{md:4,xs:1,sm:2},borderTopRightRadius:40,mt:{md:0,sm:0,xs:2},ml:{md:0,sm:2,xs:0 },borderTopLeftRadius:{md:0,sm:0,xs:40},borderBottomLeftRadius:{md:0,sm:0,xs:40}}}>
@@ -192,7 +192,7 @@ const Home = () => {
                   </Stack>
                   <Typography sx={{ color: "#2DAAE1", mt: 2, fontWeight: 'bold',fontSize:{md:30,sm:27,xs:26},textAlign:'center' }}>Follow us on Twitter</Typography>
                   <Typography sx={{color:'#fff',mt:2,textAlign:'center',fontSize:{md:25,sm:20,xs:18}}}>Get valuable content and updates about us. Stay updated with new upcoming project and resources</Typography>
-                    <Button variant='contained' sx={{mt:2}}>Join Now</Button>
+                    <Button href='https://twitter.com/Web3Forge' target='_blank' variant='contained' sx={{mt:2}}>Join Now</Button>
               </Stack>
           </Stack>
           <Footer />
