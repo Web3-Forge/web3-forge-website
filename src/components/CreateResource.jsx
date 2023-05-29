@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { Stack, Typography, Button, Modal, TextField, MenuItem, InputLabel, FormControl,Select } from '@mui/material'
-import SideDrawer from './drawer';
+import SideDrawer from './Drawer';
 import { auth, db } from './firebaseConfig';
 import { setDoc,doc,Timestamp,addDoc,collection } from 'firebase/firestore';
 

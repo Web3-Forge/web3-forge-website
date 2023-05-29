@@ -2,7 +2,7 @@ import React,{useState,useEffect,useLayoutEffect} from 'react'
 import { Stack, Box, Typography, Button, TextField, Alert,Card,CardContent,CardActionArea } from '@mui/material';
 import { auth, db } from './firebaseConfig';
 import { collection,getDocs, orderBy,query } from 'firebase/firestore';
-import SideDrawer from './drawer';
+import SideDrawer from './Drawer';
 
 const Resources = () => {
   const [email, setEmail] = useState('');
