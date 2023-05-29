@@ -12,11 +12,11 @@ function App() {
   
      <Routes>
       <Route path={'/'} exact element={<Home />} />
-      <Route path={'/:dashboard'} element={<Dashboard />} />
-      <Route path={'/:resources'} element={<Resources/>} />
-      <Route path={'/:create-resource'} element={<CreateResource/>} />
-      
+      <Route path={'/dashboard'} element={<Dashboard />} />
+      <Route path={'/resources'} element={<Resources/>} />
+      <Route path={'/create-resource'} element={<CreateResource/>} />
       </Routes> 
+     
   )
 }
 
